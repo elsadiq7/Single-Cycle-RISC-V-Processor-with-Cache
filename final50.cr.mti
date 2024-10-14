@@ -1,0 +1,138 @@
+{C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/reg_file.v} {1 {vlog -work work -vopt -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/reg_file.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module reg_file
+
+Top level modules:
+	reg_file
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/cache_top.v} {1 {vlog -work work -vopt -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/cache_top.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module cache_top
+
+Top level modules:
+	cache_top
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/coverage_pkg.sv} {2 {vlog -work work -vopt -sv -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/coverage_pkg.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package coverage_pkg
+-- Importing package transaction_pkg
+** Warning: C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/coverage_pkg.sv(83): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/coverage_pkg.sv(89): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/coverage_pkg.sv(98): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+** Warning: C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/coverage_pkg.sv(105): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+
+Top level modules:
+	--none--
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/Control_Unit.v} {1 {vlog -work work -vopt -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/Control_Unit.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Control_Unit
+
+Top level modules:
+	Control_Unit
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/RISC_if.sv} {1 {vlog -work work -vopt -sv -stats=none {C:\Users\LAP ME\Documents\ITI\my_riscv_final2\design_tb_files\RISC_if.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling interface RISC_if
+-- Importing package transaction_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/Main_Decoder.v} {1 {vlog -work work -vopt -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/Main_Decoder.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Main_Decoder
+
+Top level modules:
+	Main_Decoder
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/instruction_memory.v} {1 {vlog -work work -vopt -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/instruction_memory.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module instruction_memory
+
+Top level modules:
+	instruction_memory
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/ALU.v} {1 {vlog -work work -vopt -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/ALU.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/Main_Memory.v} {1 {vlog -work work -vopt -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/Main_Memory.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Main_Memory
+
+Top level modules:
+	Main_Memory
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/instruction_decoder.v} {1 {vlog -work work -vopt -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/instruction_decoder.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module instruction_decoder
+
+Top level modules:
+	instruction_decoder
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/ALU_Decoder.v} {1 {vlog -work work -vopt -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/ALU_Decoder.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module ALU_Decoder
+
+Top level modules:
+	ALU_Decoder
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/cache_controller.v} {1 {vlog -work work -vopt -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/cache_controller.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module cache_controller
+
+Top level modules:
+	cache_controller
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/extend.v} {1 {vlog -work work -vopt -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/extend.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module extend
+
+Top level modules:
+	extend
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/risc_v_processor.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/risc_v_processor.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module risc_v_processor
+
+Top level modules:
+	risc_v_processor
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/RISC_monitor.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/RISC_monitor.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package RISC_monitor_sv_unit
+-- Importing package transaction_pkg
+-- Importing package coverage_pkg
+-- Importing package scoreboard_pkg
+-- Importing package shared_pkg
+-- Compiling module RISC_monitor
+
+Top level modules:
+	RISC_monitor
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/PC.v} {1 {vlog -work work -vopt -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/PC.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/shared_pkg.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/shared_pkg.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package shared_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/cache_memory.v} {1 {vlog -work work -vopt -stats=none {C:/Users/LAP ME/Documents/ITI/my_riscv_final2/design_tb_files/cache_memory.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module cache_memory
+
+Top level modules:
+	cache_memory
+
+} {} {}}
