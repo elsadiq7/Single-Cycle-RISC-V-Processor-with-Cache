@@ -10,11 +10,6 @@ This project implements a single-cycle RISC-V processor with integrated cache me
 - [Instructions Supported](#instructions-supported)
 - [Cache Memory Summary](#cache-memory-summary)
 - [Performance Analysis](#performance-analysis)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Introduction
 
 The RISC-V (Reduced Instruction Set Computing - Five) architecture is an open standard that provides a framework for designing processors. This project focuses on creating a single-cycle RISC-V processor that implements fundamental operations while integrating cache memory to optimize performance.
