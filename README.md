@@ -10,10 +10,6 @@ This project implements a single-cycle RISC-V processor with integrated cache me
 - [Supported Instructions](#supported-instructions)
 - [Cache Memory Summary](#cache-memory-summary)
 - [Performance Analysis](#performance-analysis)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
