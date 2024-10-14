@@ -1,54 +1,66 @@
-# Cache Controller Implementation with Write-Through Policy
+# Single Cycle RISC-V Processor with Cache
 
-- **Data Memory**: Only the data memory will be cached; instruction memory remains unaffected.
-- **Cache Level**: The system will implement only one level of caching.
-- **Main Memory Capacity**: 4 Kbytes (word addressable with 10 bits or byte addressable with 12 bits).
-- **Access Time**: Main memory access (for read or write) takes 4 clock cycles.
-- **Cache Geometry**: Data cache specifications are (512, 16, 1), which implies:
-  - Total cache capacity: 512 bytes
-  - Each cache block: 16 bytes
-  - Total blocks: 32
-  - Cache mapping: Direct mapping
-- **Write Policy**: Implements write-through and write-around policies for write hit and miss handling; no write buffers exist.
-  - SW instructions will stall the processor.
-  - LW instructions stall only on a miss.
+This project implements a single-cycle RISC-V processor with integrated cache memory, designed to enhance instruction execution efficiency and reduce memory access latency. 
 
-To construct the caching system, the data memory in the single-cycle implementation is replaced with a new memory system module that includes:
-- Cache memory module
-- Cache controller module
-- Data memory module
+## Table of Contents
 
-### Control Signal
-The memory system features a stall control signal that temporarily halts the processor when necessary. The stall signal remains asserted until the processor can resume normal execution.
+- [Introduction](#introduction)
+- [Features](#features)
+- [Microarchitecture Overview](#microarchitecture-overview)
+- [Instructions Supported](#instructions-supported)
+- [Cache Memory Summary](#cache-memory-summary)
+- [Performance Analysis](#performance-analysis)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Cache Controller Functionality
-The cache controller manages the tags, valid bits, and uses the index and tag parts of the memory address to determine hits or misses. It generates the stall control signal and controls the cache and memory modules in four scenarios:
+## Introduction
 
-1. **Read Hit (LW Instruction)**:
-   - No stall; data is read from the cache.
+The RISC-V (Reduced Instruction Set Computing - Five) architecture is an open standard that provides a framework for designing processors. This project focuses on creating a single-cycle RISC-V processor that implements fundamental operations while integrating cache memory to optimize performance.
 
-2. **Read Miss (LW Instruction)**:
-   - Stall is asserted; data is fetched from the data memory. The data memory provides a block of data, and the cache controller fills the cache and deasserts the stall signal once the data is ready.
+## Features
 
-3. **Write Hit (SW Instruction)**:
-   - Data is written to both cache memory and data memory (due to write-through policy). The stall signal is asserted until the memory confirms the write via its ready signal.
+- Single-cycle execution for RISC-V instructions.
+- Support for basic arithmetic and logical operations.
+- Integration of cache memory for improved data retrieval speed.
+- Comprehensive documentation of the microarchitecture and design decisions.
 
-4. **Write Miss (SW Instruction)**:
-   - Data is written only in the data memory (due to write-around policy), and the stall signal is asserted until the memory completes the operation.
+## Microarchitecture Overview
 
-## Implementation Details
-- The cache controller requires the index and tag of the accessed address, along with access to the valid bits and tags corresponding to the cache blocks.
-- The valid bits array is initialized to zeros for a cold cache start using a reset signal.
-- Both the valid and tag arrays are updated when a new block is cached.
+The microarchitecture of the processor is designed to efficiently handle RISC-V instructions. It consists of the following components:
 
-### Finite State Machine
-The cache controller operates on the opposite clock edge from the PC and implements a finite state machine with three states: idle, reading, and writing:
-- **Idle**: Initial state.
-- **Reading**: Activated on a read miss.
-- **Writing**: Activated on any write operation.
-- The controller returns to the idle state once the operation is complete, ensuring correct timing for the stall signal.
+- **Control Unit**: Generates control signals based on the opcode of the instruction.
+- **Datapath**: Includes components such as the ALU (Arithmetic Logic Unit), registers, and memory.
+- **Memory Interface**: Handles interaction with both cache and main memory.
+  
+### Control Signals
 
-## Deliverables
-- Integrated code implementing the cache system.
-- Testbench for various LW/SW program cases.
-- Diagram of the implemented finite state machine.
+Key control signals include:
+- `RegWrite`: Enables writing to the register file.
+- `ALUSrc`: Determines the second operand for the ALU.
+- `PCSrc`: Selects the next address for the program counter.
+
+## Instructions Supported
+
+The processor currently supports a subset of the RISC-V instruction set, including:
+
+- **R-type Instructions**: Basic arithmetic and logical operations (e.g., add, sub).
+- **I-type Instructions**: Immediate operations (e.g., addi).
+- **J-type Instructions**: Jump operations (e.g., jal).
+
+## Cache Memory Summary
+
+Cache memory is integrated into the processor to reduce the time required for memory access. It stores frequently accessed data and instructions, significantly improving the overall execution speed of programs. The cache hierarchy optimizes data retrieval and allows for efficient instruction pipelining.
+
+## Performance Analysis
+
+The execution time of the processor is determined by the number of instructions and the critical path through which the instructions are processed. The cycle time is established based on the slowest instruction, ensuring synchronous operation across all components. 
+
+### Example Performance Metrics
+
+For a given program with 100 billion instructions, the total execution time can be calculated using the formula:
+
+\[ \text{Execution Time} = \text{Number of Instructions} \times \text{Cycles per Instruction} \times \text{Cycle Time} \]
+
+
